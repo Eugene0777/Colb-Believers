@@ -1,0 +1,42 @@
+name: Weekly Leaderboard Update
+
+on:
+  schedule:
+    - cron: "30 20 * * 2"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run update script
+        run: |
+          python update_leaderboard.py
+        env:
+          SOCIALDATA_API_KEY: ${{ secrets.SOCIALDATA_API_KEY }}
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHubBot"
+          git config --global user.email "action@github.com"
+          git add all_tweets.json leaderboard.json
+          git commit -m "Weekly leaderboard update" || echo "No changes"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
