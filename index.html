@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colb Believers</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- FLYING BEES CONTAINER -->
+<div id="flying-bees-container"></div>
+
+<header class="site-header">
+    <div class="brand">
+        <span class="brand-mark">COLB</span>
+        <img src="media/logo.png" alt="COLB" class="brand-logo" />
+    </div>
+
+    <!-- Static bees in header -->
+    <div class="header-bee-emojis">
+        <img src="media/COLB_lol.webp" class="header-bee-static">
+        <img src="media/COLB_cool.webp" class="header-bee-static">
+        <img src="media/COLB_clown.webp" class="header-bee-static">
+        <img src="media/COLB_love.webp" class="header-bee-static">
+        <img src="media/COLB_Happy.webp" class="header-bee-static">
+    </div>
+
+    <!-- Dev signature -->
+    <div class="dev-credit">
+        Dev: <a href="https://x.com/Jacks12300711" target="_blank">@Kuznets</a>
+    </div>
+</header>
+
+<main class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Colb Believers</h1>
+            <p>
+                Social feed of creators inside <span class="hero-highlight">colb Club</span>.
+                Discover the most active authors.
+            </p>
+        </div>
+
+        <!-- Decorative right-side art -->
+        <div class="hero-art">
+            <img src="media/bee_home.png" class="bee-home" alt="Hive">
+            <img src="media/bee.png" class="bee-fly" alt="Bee">
+        </div>
+
+        <div class="hero-stats">
+            <div class="hero-stat" id="total-posts">Posts: 0</div>
+            <div class="hero-stat" id="total-users">Users: 0</div>
+            <div class="hero-stat" id="total-views">Views: 0</div>
+        </div>
+    </section>
+
+    <!-- CONTROLS -->
+    <section class="controls">
+        <div class="field">
+            <label>Search</label>
+            <input id="search" type="text" placeholder="@handle…" />
+        </div>
+
+        <div class="field">
+            <label>Period</label>
+            <select id="time-select">
+                <option value="7">Last 7 days</option>
+                <option value="14">Last 14 days</option>
+                <option value="30">Last 30 days</option>
+                <option value="all" selected>All time</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Sort by</label>
+            <select id="sort-select">
+                <option value="posts">Posts</option>
+                <option value="likes">Likes</option>
+                <option value="retweets">Retweets</option>
+                <option value="comments">Comments</option>
+                <option value="views" selected>Views</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Order</label>
+            <button id="sort-order-btn" class="order-btn" data-order="desc">▼ Desc</button>
+        </div>
+    </section>
+
+    <!-- USER GRID FEED -->
+    <section id="feed-container" class="feed"></section>
+
+    <!-- PAGINATION -->
+    <section class="pagination">
+        <button id="prev-page" class="pager-btn">Previous</button>
+        <span id="page-info" class="page-info"></span>
+        <button id="next-page" class="pager-btn">Next</button>
+    </section>
+
+</main>
+
+<!-- ===========================
+      TWEETS MODAL POPUP
+=========================== -->
+<div id="tweets-modal" class="modal hidden">
+    <div class="modal-content">
+
+        <button id="modal-close" class="modal-close">✕</button>
+
+        <h2 id="modal-title">Tweets</h2>
+
+        <!-- Decorative bee image -->
+        <img src="media/COLB_sus.webp" class="modal-mascot" alt="Bee mascot">
+
+        <!-- Tweets -->
+        <div id="modal-body" class="modal-body"></div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

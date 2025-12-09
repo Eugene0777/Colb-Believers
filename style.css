@@ -1,0 +1,404 @@
+:root {
+    --bg: #1a1a1a;
+    --bg-elevated: #2b2b2b;
+    --bg-soft: #222;
+    --accent: #ffe41e;
+    --text: #fff;
+    --muted: #bdbdbd;
+    --border: #3a3a3a;
+    --radius-lg: 18px;
+    --radius-md: 12px;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* HEADER */
+.site-header {
+    position: sticky;
+    top: 0;
+    padding: 18px 28px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(12px);
+    z-index: 10;
+}
+
+.brand {
+    font-size: 1.45rem;
+    font-weight: 700;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.brand-dot {
+    color: var(--accent);
+}
+
+/* новый логотип */
+.brand-logo {
+    height: 100px;
+    width: auto;
+    display: block;
+    transform: translateY(1px);
+}
+
+/* PAGE */
+.page {
+    max-width: 1240px;
+    margin: 24px auto;
+    padding: 0 24px;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.hero-text h1 {
+    font-size: 2.3rem;
+    margin-bottom: 6px;
+}
+
+.hero-highlight { color: var(--accent); }
+
+.hero-stats {
+    display: grid;
+    gap: 8px;
+    min-width: 200px;
+}
+
+.hero-stat {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    padding: 12px;
+    border-radius: var(--radius-md);
+}
+
+/* CONTROLS */
+.controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+input, select {
+    background: var(--bg-elevated);
+    color: var(--text);
+    padding: 10px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+.order-btn {
+    border: 1px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+}
+
+/* FEED GRID */
+.feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+    gap: 24px;
+}
+
+/* USER CARD */
+.user-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.user-avatar {
+    width: 90px;
+    height: 90px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-handle { color: var(--muted); font-size: 0.85rem; }
+
+.user-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+}
+
+.user-stat-pill {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+}
+
+/* PAGINATION */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.pager-btn {
+    background: var(--bg-elevated);
+    border-radius: 32px;
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.pager-btn:hover {
+    border-color: var(--accent);
+}
+
+/* ============ MODAL POPUP ============= */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10,10,10,0.75);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    padding: 20px;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--bg-elevated);
+    border-radius: 18px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    position: relative;
+    animation: modalFade 0.25s ease;
+}
+
+@keyframes modalFade {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* картинка пчёлки в модалке */
+.modal-mascot {
+    display: block;
+    margin: 8px auto 18px;
+    width: 140px;
+    max-width: 60%;
+}
+
+/* Tweet cards inside modal */
+
+.profile-tweet-card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: 16px;
+    border-radius: var(--radius-md);
+}
+
+.tweet-text {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.tweet-media {
+    display: grid;
+    gap: 8px;
+}
+
+.tweet-media.one { grid-template-columns: 1fr; }
+.tweet-media.two { grid-template-columns: 1fr 1fr; }
+.tweet-media.three {
+    grid-template-columns: 2fr 1fr;
+}
+.tweet-media.four { grid-template-columns: 1fr 1fr; }
+
+.tweet-img {
+    width: 100%;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    object-fit: cover;
+}
+
+.profile-tweet-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+/* Decorative bee + hive in hero */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.hero-art {
+    position: relative;
+    width: 220px;
+    height: 180px;
+    margin-left: 40px;
+}
+
+.bee-home {
+    width: 250px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0.9;
+}
+
+.bee-fly {
+    width: 120px;
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    animation: bee-float 3s ease-in-out infinite;
+}
+
+/* Cute floating animation */
+@keyframes bee-float {
+    0%   { transform: translateY(0px) rotate(1deg); }
+    50%  { transform: translateY(-10px) rotate(-2deg); }
+    100% { transform: translateY(0px) rotate(1deg); }
+}
+
+/* ================================
+   Global flying bees
+================================ */
+#flying-bees-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 5; /* выше контента, ниже модалок */
+}
+
+/* Flying bees (2× size) */
+.flying-bee {
+    position: fixed;
+    width: 80px; /* ×2 */
+    height: auto;
+    pointer-events: none;
+    z-index: 50;
+    will-change: left, top, transform;
+}
+
+/* Static bees in header */
+.header-bee-emojis {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.header-bee-static {
+    width: 135px;  /* ×2 */
+    height: 135px; /* ×2 */
+    object-fit: contain;
+    opacity: 0.95;
+}
+
+/* Dev credit in header */
+.dev-credit {
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--muted);
+    font-weight: 500;
+    opacity: 0.85;
+    pointer-events: auto;
+}
+
+.dev-credit a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.dev-credit a:hover {
+    text-decoration: underline;
+}
