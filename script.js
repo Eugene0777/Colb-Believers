@@ -88,7 +88,6 @@ async function fetchTweets() {
             } else if (Array.isArray(json.tweets)) {
                 allTweets = json.tweets;
             } else {
-                // на всякий случай ищем любой массив в значениях объекта
                 const anyArray = Object.values(json).find(v => Array.isArray(v));
                 allTweets = anyArray || [];
             }
@@ -314,7 +313,6 @@ function renderTweetCard(t) {
     return card;
 }
 
-/* Layout classes for media grid */
 function getMediaLayoutClass(count) {
     if (count === 1) return "one";
     if (count === 2) return "two";
@@ -400,9 +398,7 @@ function setupControls() {
     });
 }
 
-/* ============================================================
-   INIT
-============================================================ */
+
 
 document.addEventListener("DOMContentLoaded", async () => {
     setupControls();
@@ -514,6 +510,7 @@ function updateBees() {
 
 
 document.addEventListener("DOMContentLoaded", spawnFlyingBees);
+
 
 
 
