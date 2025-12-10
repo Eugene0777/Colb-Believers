@@ -322,7 +322,6 @@ function getMediaLayoutClass(count) {
     return "four";
 }
 
-/* Render photo / GIF / video */
 function renderMediaItem(m) {
     if (!m) return "";
 
@@ -346,9 +345,6 @@ function renderMediaItem(m) {
     return "";
 }
 
-/* ============================================================
-   CLOSE MODAL
-============================================================ */
 
 document.getElementById("modal-close").addEventListener("click", () => {
     document.getElementById("tweets-modal").classList.add("hidden");
@@ -520,5 +516,6 @@ function updateBees() {
 
 
 document.addEventListener("DOMContentLoaded", spawnFlyingBees);
+
 
 
