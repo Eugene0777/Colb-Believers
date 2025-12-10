@@ -346,7 +346,6 @@ input, select {
     will-change: left, top, transform;
 }
 
-/* Static bees in header */
 .header-bee-emojis {
     position: absolute;
     left: 50%;
@@ -365,7 +364,6 @@ input, select {
     opacity: 0.95;
 }
 
-/* Dev credit in header */
 .dev-credit {
     position: absolute;
     right: 32px;
