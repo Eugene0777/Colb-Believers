@@ -496,11 +496,9 @@ function updateBees() {
             }
         }
 
-        // обновить позицию
         el.style.left = bee.x + "px";
         el.style.top = bee.y + "px";
 
-        // повернуть пчелу по направлению движения
         const angleDeg = Math.atan2(bee.dy, bee.dx) * 180 / Math.PI;
         el.style.transform = `rotate(${angleDeg + 90}deg)`;
     });
@@ -510,6 +508,7 @@ function updateBees() {
 
 
 document.addEventListener("DOMContentLoaded", spawnFlyingBees);
+
 
 
 
