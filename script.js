@@ -1,6 +1,4 @@
-/* ============================================================
-   GLOBAL STATE
-============================================================ */
+
 
 let leaderboardBase = [];
 let leaderboardData = [];
@@ -14,9 +12,7 @@ const perPage = 12;
 
 let timeFilter = "all";
 
-/* ============================================================
-   HELPERS
-============================================================ */
+
 
 function parseDateSafe(v) {
     if (!v) return null;
@@ -42,9 +38,7 @@ function escapeHtml(s) {
         .replace(/>/g, "&gt;");
 }
 
-/* ============================================================
-   NORMALIZE LEADERBOARD  (REAL FORMAT)
-============================================================ */
+
 
 function normalizeLeaderboard(raw) {
     if (!Array.isArray(raw)) return [];
@@ -542,3 +536,4 @@ function updateBees() {
 
 
 document.addEventListener("DOMContentLoaded", spawnFlyingBees);
+
