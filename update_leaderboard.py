@@ -284,8 +284,6 @@ def collect_links_tweets():
 
 
 
-# MERGE
-
 
 def merge_tweets(community_raw, link_norm):
     logging.info("\n=========== ОБЪЕДИНЕНИЕ РЕЗУЛЬТАТОВ ===========")
@@ -310,9 +308,7 @@ def merge_tweets(community_raw, link_norm):
     return final
 
 
-# ============================================================
-# LEADERBOARD
-# ============================================================
+
 
 def build_leaderboard(tweets):
     board = {}
@@ -341,9 +337,7 @@ def build_leaderboard(tweets):
     return [[user, stats] for user, stats in board.items()]
 
 
-# ============================================================
-# MAIN
-# ============================================================
+
 
 if __name__ == "__main__":
     community_raw = collect_all_community_tweets()
@@ -356,6 +350,7 @@ if __name__ == "__main__":
     leaderboard = build_leaderboard(all_tweets)
     save_json(LEADERBOARD_FILE, leaderboard)
     logging.info(f"💾 {LEADERBOARD_FILE} сохранён")
+
 
 
 
