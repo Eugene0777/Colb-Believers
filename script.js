@@ -356,9 +356,7 @@ document.getElementById("tweets-modal").addEventListener("click", e => {
     }
 });
 
-/* ============================================================
-   CONTROLS
-============================================================ */
+
 
 function setupControls() {
     document.getElementById("search").addEventListener("input", () => {
@@ -516,6 +514,7 @@ function updateBees() {
 
 
 document.addEventListener("DOMContentLoaded", spawnFlyingBees);
+
 
 
 
