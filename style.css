@@ -113,14 +113,12 @@ input, select {
     cursor: pointer;
 }
 
-/* FEED GRID */
 .feed {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
     gap: 24px;
 }
 
-/* USER CARD */
 .user-card {
     background: var(--bg-elevated);
     border: 1px solid var(--border);
