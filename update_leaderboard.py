@@ -31,9 +31,7 @@ LINK_TWEETS = [
     "https://twitter.com/jacks12300711/status/1997238765493145988",
 ]
 
-# ============================================================
-# HELPERS
-# ============================================================
+
 
 def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
@@ -49,9 +47,7 @@ def extract_tweet_id(tweet_url: str) -> str:
     raise ValueError(f"Не могу извлечь ID из URL: {tweet_url}")
 
 
-# ============================================================
-# STABLE REQUEST
-# ============================================================
+
 
 def safe_request(url, params=None, retries=8, timeout=30):
     for attempt in range(1, retries + 1):
@@ -371,3 +367,4 @@ if __name__ == "__main__":
     leaderboard = build_leaderboard(all_tweets)
     save_json(LEADERBOARD_FILE, leaderboard)
     logging.info(f"💾 {LEADERBOARD_FILE} сохранён")
+
