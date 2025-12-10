@@ -1,5 +1,3 @@
-
-
 let leaderboardBase = [];
 let leaderboardData = [];
 let allTweets = [];
@@ -62,9 +60,7 @@ function normalizeLeaderboard(raw) {
     });
 }
 
-/* ============================================================
-   LOAD DATA
-============================================================ */
+
 
 async function fetchLeaderboard() {
     try {
@@ -107,9 +103,7 @@ async function fetchTweets() {
     }
 }
 
-/* ============================================================
-   GET USER TWEETS (with media support)
-============================================================ */
+
 
 function getTweetsForUser(username, days = "all") {
     const h = cleanHandle(username);
@@ -132,9 +126,7 @@ function getTweetsForUser(username, days = "all") {
     });
 }
 
-/* ============================================================
-   MAIN RECOMPUTE
-============================================================ */
+
 
 function recomputeLeaderboard() {
     leaderboardData = leaderboardBase.map(row =>
@@ -182,9 +174,7 @@ function aggregateUserTweets(username, days) {
     return { posts, likes, retweets: rts, comments: cm, views: vw };
 }
 
-/* ============================================================
-   SORT + FILTER
-============================================================ */
+
 
 function sortLeaderboard() {
     leaderboardData.sort((a, b) =>
@@ -201,9 +191,7 @@ function filteredLeaderboard() {
         : leaderboardData;
 }
 
-/* ============================================================
-   TOTALS
-============================================================ */
+
 
 function renderTotals() {
     document.getElementById("total-posts").textContent =
@@ -216,9 +204,7 @@ function renderTotals() {
         "Views: " + leaderboardData.reduce((s, u) => s + (u.views || 0), 0);
 }
 
-/* ============================================================
-   RENDER FEED
-============================================================ */
+
 
 function renderFeed() {
     const container = document.getElementById("feed-container");
@@ -266,9 +252,7 @@ function renderFeed() {
         `Page ${currentPage} / ${totalPages}`;
 }
 
-/* ============================================================
-   MODAL WITH TWEETS + MEDIA
-============================================================ */
+
 
 function openTweetsModal(username) {
     const modal = document.getElementById("tweets-modal");
@@ -536,4 +520,5 @@ function updateBees() {
 
 
 document.addEventListener("DOMContentLoaded", spawnFlyingBees);
+
 
