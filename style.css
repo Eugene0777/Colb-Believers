@@ -244,7 +244,6 @@ input, select {
     gap: 14px;
 }
 
-/* картинка пчёлки в модалке */
 .modal-mascot {
     display: block;
     margin: 8px auto 18px;
@@ -252,7 +251,6 @@ input, select {
     max-width: 60%;
 }
 
-/* Tweet cards inside modal */
 
 .profile-tweet-card {
     background: var(--bg-soft);
@@ -292,7 +290,6 @@ input, select {
     font-size: 0.8rem;
 }
 
-/* Decorative bee + hive in hero */
 .hero {
     display: grid;
     grid-template-columns: 1fr auto auto;
