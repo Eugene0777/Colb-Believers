@@ -428,11 +428,9 @@ function spawnFlyingBees() {
         bee.src = "media/bee.png";
         bee.className = "flying-bee";
 
-        // Начальная позиция
         let x = Math.random() * (window.innerWidth - SAFE * 2) + SAFE;
         let y = Math.random() * (window.innerHeight - SAFE * 2) + SAFE;
 
-        // Вектор направления (мягкий)
         let angle = Math.random() * Math.PI * 2;
         let dx = Math.cos(angle) * SPEED;
         let dy = Math.sin(angle) * SPEED;
@@ -453,13 +451,11 @@ function updateBees() {
     beesArr.forEach(bee => {
         const el = bee.el;
 
-        // движение
         bee.x += bee.dx;
         bee.y += bee.dy;
 
         let bounced = false;
 
-        // отражение от краёв экрана — улучшенное
         if (bee.x < SAFE) {
             bee.x = SAFE + 2; // толкаем от стены
             bee.dx = Math.abs(bee.dx); 
@@ -506,6 +502,7 @@ function updateBees() {
 
 
 document.addEventListener("DOMContentLoaded", spawnFlyingBees);
+
 
 
 
