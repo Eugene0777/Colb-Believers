@@ -409,13 +409,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     recomputeLeaderboard();
 });
 
-/* ============================================================
-   Smooth Bees — Constant Speed, No Disappear, Natural Flight
-============================================================ */
+
 
 const BEE_COUNT = 7;
-const SPEED = 0.6; // скорость — медленная, постоянная
-const SAFE = 60;   // отступ от краёв
+const SPEED = 0.6; 
+const SAFE = 60;   
 
 let beesArr = [];
 
@@ -502,6 +500,7 @@ function updateBees() {
 
 
 document.addEventListener("DOMContentLoaded", spawnFlyingBees);
+
 
 
 
