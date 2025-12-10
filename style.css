@@ -192,7 +192,6 @@ input, select {
     border-color: var(--accent);
 }
 
-/* ============ MODAL POPUP ============= */
 
 .modal {
     position: fixed;
@@ -320,16 +319,13 @@ input, select {
     animation: bee-float 3s ease-in-out infinite;
 }
 
-/* Cute floating animation */
 @keyframes bee-float {
     0%   { transform: translateY(0px) rotate(1deg); }
     50%  { transform: translateY(-10px) rotate(-2deg); }
     100% { transform: translateY(0px) rotate(1deg); }
 }
 
-/* ================================
-   Global flying bees
-================================ */
+
 #flying-bees-container {
     position: fixed;
     top: 0;
@@ -338,10 +334,9 @@ input, select {
     height: 100%;
     pointer-events: none;
     overflow: hidden;
-    z-index: 5; /* выше контента, ниже модалок */
+    z-index: 5; 
 }
 
-/* Flying bees (2× size) */
 .flying-bee {
     position: fixed;
     width: 80px; /* ×2 */
