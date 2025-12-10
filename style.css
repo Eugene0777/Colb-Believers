@@ -52,14 +52,12 @@ body {
     transform: translateY(1px);
 }
 
-/* PAGE */
 .page {
     max-width: 1240px;
     margin: 24px auto;
     padding: 0 24px;
 }
 
-/* HERO */
 .hero {
     display: flex;
     justify-content: space-between;
