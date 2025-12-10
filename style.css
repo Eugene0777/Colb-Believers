@@ -21,7 +21,6 @@ body {
     display: none !important;
 }
 
-/* HEADER */
 .site-header {
     position: sticky;
     top: 0;
@@ -44,7 +43,6 @@ body {
     color: var(--accent);
 }
 
-/* новый логотип */
 .brand-logo {
     height: 100px;
     width: auto;
@@ -85,7 +83,6 @@ body {
     border-radius: var(--radius-md);
 }
 
-/* CONTROLS */
 .controls {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr auto;
