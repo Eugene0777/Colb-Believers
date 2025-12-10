@@ -462,12 +462,12 @@ function updateBees() {
         // отражение от краёв экрана — улучшенное
         if (bee.x < SAFE) {
             bee.x = SAFE + 2; // толкаем от стены
-            bee.dx = Math.abs(bee.dx); // двигаем вправо
+            bee.dx = Math.abs(bee.dx); 
             bounced = true;
         }
         if (bee.x > window.innerWidth - SAFE) {
             bee.x = window.innerWidth - SAFE - 2; 
-            bee.dx = -Math.abs(bee.dx); // двигаем влево
+            bee.dx = -Math.abs(bee.dx); 
             bounced = true;
         }
 
@@ -482,12 +482,10 @@ function updateBees() {
             bounced = true;
         }
 
-        // если был "удар" — корректируем угол и не делаем случайный поворот
         if (bounced) {
             bee.angle = Math.atan2(bee.dy, bee.dx);
         } 
         else {
-            // редкий мягкий поворот
             if (Math.random() < 0.01) {
                 const turn = (Math.random() - 0.5) * 0.25;
                 bee.angle += turn;
@@ -508,6 +506,7 @@ function updateBees() {
 
 
 document.addEventListener("DOMContentLoaded", spawnFlyingBees);
+
 
 
 
