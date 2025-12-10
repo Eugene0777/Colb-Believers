@@ -188,7 +188,6 @@ def collect_all_community_tweets():
 
         logging.info(f"➕ новых: {new_count} | всего: {len(all_tweets)}")
 
-        # ================= АНТИ-ЛОЖНЫЙ КОНЕЦ =================
         if len(tweets) == 0:
             logging.warning("⚠ Пустая страница — проверяем, не ложный ли это конец...")
 
@@ -284,9 +283,9 @@ def collect_links_tweets():
     return results
 
 
-# ============================================================
+
 # MERGE
-# ============================================================
+
 
 def merge_tweets(community_raw, link_norm):
     logging.info("\n=========== ОБЪЕДИНЕНИЕ РЕЗУЛЬТАТОВ ===========")
@@ -357,6 +356,7 @@ if __name__ == "__main__":
     leaderboard = build_leaderboard(all_tweets)
     save_json(LEADERBOARD_FILE, leaderboard)
     logging.info(f"💾 {LEADERBOARD_FILE} сохранён")
+
 
 
 
