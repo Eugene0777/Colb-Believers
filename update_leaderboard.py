@@ -69,12 +69,9 @@ def safe_request(url, params=None, retries=8, timeout=30):
     raise RuntimeError(f"❌ API не отвечает после {retries} попыток: {url}")
 
 
-# ============================================================
-# MEDIA PARSING (с защитой от дублей)
-# ============================================================
+
 
 def extract_best_video(media):
-    """Выбираем лучший видео-вариант по bitrate."""
     if media.get("type") not in ("video", "animated_gif"):
         return None
 
@@ -95,7 +92,6 @@ def extract_best_video(media):
 
 
 def extract_media(tweet):
-    """Извлекает медиа из Twitter-твита с удалением дублей."""
     media = []
 
     if "extended_entities" in tweet and "media" in tweet["extended_entities"]:
@@ -367,4 +363,5 @@ if __name__ == "__main__":
     leaderboard = build_leaderboard(all_tweets)
     save_json(LEADERBOARD_FILE, leaderboard)
     logging.info(f"💾 {LEADERBOARD_FILE} сохранён")
+
 
