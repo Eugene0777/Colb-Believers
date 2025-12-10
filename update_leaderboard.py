@@ -124,9 +124,7 @@ def extract_media(tweet):
     return unique
 
 
-# ============================================================
-# NORMALIZER
-# ============================================================
+
 
 def normalize_tweet(tweet: dict) -> dict:
     user = tweet.get("user", {}) or {}
@@ -151,9 +149,7 @@ def normalize_tweet(tweet: dict) -> dict:
     }
 
 
-# ============================================================
-# COMMUNITY FETCHER — УМНЫЙ РЕЖИМ
-# ============================================================
+
 
 def fetch_community_page(cursor=None, limit=100):
     params = {"type": "Latest", "limit": limit}
@@ -262,9 +258,7 @@ def collect_all_community_tweets():
     return all_tweets
 
 
-# ============================================================
-# FETCH LINK TWEETS
-# ============================================================
+
 
 def fetch_single_tweet(tweet_id: str):
     url = f"https://api.socialdata.tools/twitter/tweets/{tweet_id}"
@@ -363,5 +357,6 @@ if __name__ == "__main__":
     leaderboard = build_leaderboard(all_tweets)
     save_json(LEADERBOARD_FILE, leaderboard)
     logging.info(f"💾 {LEADERBOARD_FILE} сохранён")
+
 
 
