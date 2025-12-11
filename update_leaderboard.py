@@ -19,7 +19,7 @@ ALL_TWEETS_FILE = "all_tweets.json"
 LEADERBOARD_FILE = "leaderboard.json"
 
 LINK_TWEETS = [
-    "https://twitter.com/jacks12300711/status/1990541572342231158",
+    "https://twitter.com/puselol/status/1995801964840435878",
     "https://twitter.com/jacks12300711/status/1990711670499385494",
     "https://twitter.com/jacks12300711/status/1991123841674846261",
     "https://twitter.com/jacks12300711/status/1991600494406684714",
@@ -359,6 +359,7 @@ if __name__ == "__main__":
     leaderboard = build_leaderboard(all_tweets)
     save_json(LEADERBOARD_FILE, leaderboard)
     logging.info(f"💾 {LEADERBOARD_FILE} сохранён")
+
 
 
 
