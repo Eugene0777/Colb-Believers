@@ -29,6 +29,15 @@ LINK_TWEETS = [
     "https://twitter.com/jacks12300711/status/1995083592066793944",
     "https://twitter.com/jacks12300711/status/1996480946216874462",
     "https://twitter.com/jacks12300711/status/1997238765493145988",
+    "https://twitter.com/sterjke/status/1998399545173065737",
+    "https://twitter.com/sterjke/status/1995806817977303262",
+    "https://twitter.com/sterjke/status/1995113365790732463",
+    "https://twitter.com/sterjke/status/1994332535438930429",
+    "https://twitter.com/sterjke/status/1993256776318304368",
+    "https://twitter.com/sterjke/status/1992590589376778719",
+    "https://twitter.com/sterjke/status/1992126672762736752",
+    "https://twitter.com/sterjke/status/1991493055099154573",
+    
 ]
 
 
@@ -350,6 +359,7 @@ if __name__ == "__main__":
     leaderboard = build_leaderboard(all_tweets)
     save_json(LEADERBOARD_FILE, leaderboard)
     logging.info(f"💾 {LEADERBOARD_FILE} сохранён")
+
 
 
 
