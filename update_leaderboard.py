@@ -192,6 +192,13 @@ LINK_TWEETS = [
     "https://twitter.com/nofelonyx/status/1983913742690652659",
     "https://twitter.com/SkywayCapitan/status/2013047838008098817",
     "https://twitter.com/alextropilo/status/2005947259834228784",
+    "https://x.com/1Asgore1/status/2012246798178423031",
+    "https://x.com/1Asgore1/status/2011877770113270236",
+    "https://x.com/1Asgore1/status/2011156500702732661",
+    "https://x.com/1Asgore1/status/2010809115334136275",
+    "https://x.com/1Asgore1/status/2008981784944656703",
+    "https://x.com/1Asgore1/status/2005532478061105459",
+    "https://x.com/1Asgore1/status/2013678966884966741",
 ] 
 def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
@@ -510,6 +517,7 @@ if __name__ == "__main__":
     leaderboard = build_leaderboard(all_tweets)
     save_json(LEADERBOARD_FILE, leaderboard)
     logging.info(f"💾 {LEADERBOARD_FILE} сохранён")
+
 
 
 
