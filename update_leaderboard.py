@@ -161,7 +161,7 @@ LINK_TWEETS = [
     "https://twitter.com/i/status/2004896052164370797",
     "https://twitter.com/i/status/2004538034453135719",
     "https://twitter.com/i/status/2004171608567521455",
-  "https://twitter.com/SkywayCapitan/status/1981070819897069874",
+    "https://twitter.com/SkywayCapitan/status/1981070819897069874",
     "https://twitter.com/SkywayCapitan/status/1981799116519919762",
     "https://twitter.com/SkywayCapitan/status/1983223063689691317",
     "https://twitter.com/SkywayCapitan/status/1983301807029018854",
@@ -510,6 +510,7 @@ if __name__ == "__main__":
     leaderboard = build_leaderboard(all_tweets)
     save_json(LEADERBOARD_FILE, leaderboard)
     logging.info(f"💾 {LEADERBOARD_FILE} сохранён")
+
 
 
 
