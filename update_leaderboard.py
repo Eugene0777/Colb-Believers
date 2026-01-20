@@ -161,8 +161,38 @@ LINK_TWEETS = [
     "https://twitter.com/i/status/2004896052164370797",
     "https://twitter.com/i/status/2004538034453135719",
     "https://twitter.com/i/status/2004171608567521455",
-]
-
+  "https://twitter.com/SkywayCapitan/status/1981070819897069874",
+    "https://twitter.com/SkywayCapitan/status/1981799116519919762",
+    "https://twitter.com/SkywayCapitan/status/1983223063689691317",
+    "https://twitter.com/SkywayCapitan/status/1983301807029018854",
+    "https://twitter.com/SkywayCapitan/status/1983866464064114849",
+    "https://twitter.com/SkywayCapitan/status/1985462441627562495",
+    "https://twitter.com/SkywayCapitan/status/1986515691303002135",
+    "https://twitter.com/SkywayCapitan/status/1987186825346392082",
+    "https://twitter.com/SkywayCapitan/status/1989028033542406486",
+    "https://twitter.com/SkywayCapitan/status/1989785765359095917",
+    "https://twitter.com/SkywayCapitan/status/1991206257026314302",
+    "https://twitter.com/SkywayCapitan/status/1991522379433160793",
+    "https://twitter.com/SkywayCapitan/status/1992984343233593755",
+    "https://twitter.com/SkywayCapitan/status/1994049219871510667",
+    "https://twitter.com/SkywayCapitan/status/1995882167415832638",
+    "https://twitter.com/SkywayCapitan/status/1997062571593970004",
+    "https://twitter.com/SkywayCapitan/status/1998124065077252551",
+    "https://twitter.com/SkywayCapitan/status/1998747423032635489",
+    "https://twitter.com/SkywayCapitan/status/1999924386531520860",
+    "https://twitter.com/SkywayCapitan/status/2002451540653830252",
+    "https://twitter.com/SkywayCapitan/status/2004273677962301537",
+    "https://twitter.com/SkywayCapitan/status/2006425420733046790",
+    "https://twitter.com/SkywayCapitan/status/2008297907259076985",
+    "https://twitter.com/SkywayCapitan/status/2010607084510101665",
+    "https://twitter.com/SkywayCapitan/status/1980694430811320425",
+    "https://twitter.com/SkywayCapitan/status/1990864863237710086",
+    "https://twitter.com/SkywayCapitan/status/1982439912038191613",
+    "https://twitter.com/Vikki_arts/status/2011732479414321600",
+    "https://twitter.com/nofelonyx/status/1983913742690652659",
+    "https://twitter.com/SkywayCapitan/status/2013047838008098817",
+    "https://twitter.com/alextropilo/status/2005947259834228784",
+] 
 def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -480,6 +510,7 @@ if __name__ == "__main__":
     leaderboard = build_leaderboard(all_tweets)
     save_json(LEADERBOARD_FILE, leaderboard)
     logging.info(f"💾 {LEADERBOARD_FILE} сохранён")
+
 
 
 
